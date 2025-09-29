@@ -13,6 +13,7 @@ var argumentsLength = function(...args) {
  * console.log(argumentsLength("a", true, null, [1,2], {x:5})); // 5
  */
 
+console.log(argumentsLength());
 console.log(argumentsLength(1, 2, 3));
 console.log(argumentsLength("a", true, null, [1,2], {x:5})); // 5
 
