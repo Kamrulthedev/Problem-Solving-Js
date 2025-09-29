@@ -13,6 +13,6 @@ async function sleep(millis) {
 }
 (async () => {
     let t = Date.now();
-    await sleep(100);
+    await sleep(50);
     console.log(Date.now() - t);
 })();
