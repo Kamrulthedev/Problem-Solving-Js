@@ -12,6 +12,8 @@ var compose = function(functions) {
 };
 
 
+
+// Example usage:
 const fn1 = compose([x => x + 1, x => 2 * x]);
 console.log(fn1(4)); // 9   => (4*2) + 1
 
