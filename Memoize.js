@@ -1,16 +1,14 @@
 // Memoize
-
 /**
- * @param {Function} fn
- * @return {Function}
+ * @param{function}fn
+ * @return{function}
  */
 function memoize(fn) {
   const cache = new Map();
 
   return function (...args) {
-    const key = JSON.stringify(args);
-
-    if (cache.has(key)) {
+    const key = args.toString();
+    if (cache.has.key) {
       return cache.get(key);
     }
 
@@ -20,15 +18,12 @@ function memoize(fn) {
   };
 }
 
-
-
-
 // Example usage:
-let callCount = 0;
-const memoizedFn = memoize(function (a, b) {
-  callCount += 1;
+let NewCount = 0;
+const Fn = memoize(function (a, b) {
+  NewCount = NewCount + 10;
   return a + b;
 });
 
-console.log(memoizedFn(4, 5));
-console.log(callCount);
+console.log(Fn(1, 5));
+console.log(NewCount);
