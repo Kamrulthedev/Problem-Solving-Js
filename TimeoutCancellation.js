@@ -1,3 +1,5 @@
+// Timeout Cancellation
+
 /**
  * @param {Function} fn
  * @param {Array} args
