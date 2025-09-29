@@ -1,9 +1,12 @@
+// Memoize
+
 /**
  * @param {Function} fn
  * @return {Function}
  */
 function memoize(fn) {
-    
+    let callCount = 0;
+    const cache =new Map();
     return function(...args) {
         
     }
