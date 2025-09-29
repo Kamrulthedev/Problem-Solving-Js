@@ -31,5 +31,4 @@ const memoizedFn = memoize(function (a, b) {
 });
 
 console.log(memoizedFn(4, 5));
-console.log(memoizedFn(2, 3));
 console.log(callCount);
