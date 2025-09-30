@@ -7,56 +7,63 @@
  * @return {Function}
  */
 
-const IntervalLoop = function (fn, args, t) {
-  fn(...args);
 
-  const IntervalKeep = setInterval(() => {
-    fn(...args);
-  }, t);
+// IntervalLoop = 5;
 
-  return function cancelFn() {
-    clearInterval(IntervalKeep);
-  };
-};
+// Const Interval
 
-// Example usage:
-const Message = (message) => {
-  console.log(message);
-};
+// const IntervalLoop = function (fn, args, t) {
+//   fn(...args);
 
-const NewMessage = IntervalLoop(Message, ["Kamrul World!"], 5000);
-
-// Cancel after 15 seconds
-setTimeout(() => {
-  NewMessage();
-  console.log("Interval cancelled With Kamrul");
-}, 15000);
-
-
-
-
-
-// var cancellable = function (fn, args, t) {
-//   fn(...args); //immediately invoke the function
-
-//   const Interval = setInterval(() => {
+//   const IntervalKeep = setInterval(() => {
 //     fn(...args);
 //   }, t);
 
 //   return function cancelFn() {
-//     clearInterval(Interval);
+//     clearInterval(IntervalKeep);
 //   };
 // };
 
 // // Example usage:
-// const logMessage = (message) => {
+// const Message = (message) => {
 //   console.log(message);
 // };
 
-// const cancel = cancellable(logMessage, ["Hello world!"], 1000);
+// const NewMessage = IntervalLoop(Message, ["Kamrul World!"], 5000);
 
-// //cencel after 5 seconds
+// // Cancel after 15 seconds
 // setTimeout(() => {
-//   cancel();
-//   console.log("Interval cancelled");
-// }, 5000);
+//   NewMessage();
+//   console.log("Interval cancelled With Kamrul");
+// }, 15000);
+
+
+
+
+
+// Var Interval 
+
+var cancellable = function (fn, args, t) {
+  fn(...args); //immediately invoke the function
+
+  const Interval = setInterval(() => {
+    fn(...args);
+  }, t);
+
+  return function cancelFn() {
+    clearInterval(Interval);
+  };
+};
+
+// Example usage:
+const logMessage = (message) => {
+  console.log(message);
+};
+
+const cancel = cancellable(logMessage, ["Hello world!"], 1000);
+
+//cencel after 5 seconds
+setTimeout(() => {
+  cancel();
+  console.log("Interval cancelled");
+}, 5000);
