@@ -12,10 +12,10 @@ var TimeLimitedCache = function () {
  */
 TimeLimitedCache.prototype.set = function (key, value, duration) {
   const now = Date.now();
-  const exisperdTime = now + duration;
+  const expireTime  = now + duration;
   const existed = false;
 
-  if (this.cache.has(key) && this.cache.get(key).exisperdTime > now) {
+  if (this.cache.has(key) && this.cache.get(key).expireTime > now) {
     existed = true;
     clearTimeout(this.cache.get(key).timer);
   }
@@ -25,7 +25,7 @@ TimeLimitedCache.prototype.set = function (key, value, duration) {
     this.cache.delete(key);
   }, duration);
 
-  this.cache.set(key, { value, exisperdTime, timer });
+  this.cache.set(key, { value, expireTime, timer });
 
   return existed;
 };
@@ -39,7 +39,7 @@ TimeLimitedCache.prototype.get = function (key) {
 
     if(this.cache.has(key)){
         const entry = this.cache.get(key);
-        if(entry.exisperdTime > now){
+        if(entry.expireTime > now){
             return entry.value;
         }
         this.cache.delete(key);
@@ -55,7 +55,7 @@ TimeLimitedCache.prototype.count = function () {
     let count = 0;
 
     for(let [key,entry] of this.cache){
-        if(entry.exisperdTime > now) count++;
+        if(entry.expireTime > now) count++;
         else this.cache.delete(key);  
     }
     return count;
