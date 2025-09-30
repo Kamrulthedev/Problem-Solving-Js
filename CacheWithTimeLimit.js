@@ -50,4 +50,13 @@ TimeLimitedCache.prototype.get = function (key) {
 /**
  * @return {number} count of non-expired keys
  */
-TimeLimitedCache.prototype.count = function () {};
+TimeLimitedCache.prototype.count = function () {
+    const now = Date.now();
+    let count = 0;
+
+    for(let [key,entry] of this.cache){
+        if(entry.exisperdTime > now) count++;
+        else this.cache.delete(key);  
+    }
+    return count;
+};
