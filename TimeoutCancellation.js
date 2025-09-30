@@ -7,7 +7,26 @@
  * @return {Function}
  */
 var cancellable = function(fn, args, t) {
-    
+    const timer = setTimeout(() => {
+        fn(...args);
+    }, timeout);
+
+
+    // return cancel function
+    return function cancelFn(){
+        clearTimeout(timer)
+    }
+};
+
+var cancellable = function(fn, args, t) {
+    const timer = setTimeout(() => {
+        fn(...args);
+    }, t);
+
+    // return cancel function
+    return function cancelFn() {
+        clearTimeout(timer);
+    };
 };
 
 /**
@@ -33,3 +52,5 @@ var cancellable = function(fn, args, t) {
  *      console.log(result); // [{"time":20,"returned":10}]
  *  }, maxT + 15)
  */
+
+
