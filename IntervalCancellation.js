@@ -42,6 +42,8 @@
 
 
 // Var Interval 
+// var cancellable = 10; 
+
 
 var cancellable = function (fn, args, t) {
   fn(...args); //immediately invoke the function
