@@ -14,10 +14,23 @@ const IntervalLoop = function (fn, args, t) {
     fn(...args);
   }, t);
 
-  return function cancelFn(){
-    clearInterval(IntervalKeep)
+  return function cancelFn() {
+    clearInterval(IntervalKeep);
   };
 };
+
+// Example usage:
+const Message = (message) => {
+  console.log(message);
+};
+
+const NewMessage = IntervalLoop(Message, ["Kamrul World!"], 5000);
+
+// Cancel after 15 seconds
+setTimeout(() => {
+  NewMessage();
+  console.log("Interval cancelled With Kamrul");
+}, 15000);
 
 
 
