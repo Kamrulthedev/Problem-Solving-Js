@@ -1,8 +1,9 @@
 // Time Limited cache
 
 var TimeLimitedCache = function() {
-    
+    this.cache = new Map();
 };
+
 
 /** 
  * @param {number} key
