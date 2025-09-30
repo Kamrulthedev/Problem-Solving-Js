@@ -10,7 +10,10 @@ var cancellable = function(fn, args, t) {
     fn(...args); //immediately invoke the function
     const Interval = setInterval(() => {
         fn(...args);
-    })
+    });
+    return function cancelFn(){
+        clearInterval(Interval)
+    }
 };
 
 /**
