@@ -26,3 +26,4 @@ const logMessage = (message) =>{
 const cancel = cancellable(logMessage, ["Hello world!"], 1000);
 
 //cencel after 5 seconds 
+setTimeout(() =>{ cancel(); console.log("Interval cancelled"); }, 5000);
