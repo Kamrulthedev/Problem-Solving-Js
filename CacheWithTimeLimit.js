@@ -34,7 +34,18 @@ TimeLimitedCache.prototype.set = function (key, value, duration) {
  * @param {number} key
  * @return {number} value associated with key
  */
-TimeLimitedCache.prototype.get = function (key) {};
+TimeLimitedCache.prototype.get = function (key) {
+    const now = Date.now();
+
+    if(this.cache.has(key)){
+        const entry = this.cache.get(key);
+        if(entry.exisperdTime > now){
+            return entry.value;
+        }
+        this.cache.delete(key);
+    }
+    return -1;
+};
 
 /**
  * @return {number} count of non-expired keys
