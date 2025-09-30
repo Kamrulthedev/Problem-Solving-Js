@@ -5,7 +5,7 @@
  */
 var timeLimit = function (fn, t) {
   return async function (...args) {
-    const NewPromise = new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       // Set Timer Message:
       const Timer = setTimeout(() => {
         reject("Time is Up! 👃");
@@ -30,4 +30,8 @@ const TimeLimit = timeLimit(
   100
 );
 
+// Time Limit (50ms)
 TimeLimit(50).then(console.log).catch(console.log);
+
+// Time Limit (150ms) 
+TimeLimit(150).then(console.log).catch(console.error);  
