@@ -1,3 +1,5 @@
+// Interval Cancellation
+
 /**
  * @param {Function} fn
  * @param {Array} args
@@ -5,7 +7,10 @@
  * @return {Function}
  */
 var cancellable = function(fn, args, t) {
-    
+    fn(...args); //immediately invoke the function
+    const Interval = setInterval(() => {
+        fn(...args);
+    })
 };
 
 /**
