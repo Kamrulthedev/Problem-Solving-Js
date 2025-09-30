@@ -19,3 +19,10 @@ var cancellable = function(fn, args, t) {
 
 
 // Example usage: 
+const logMessage = (message) =>{
+    console.log(message);
+};
+
+const cancel = cancellable(logMessage, ["Hello world!"], 1000);
+
+//cencel after 5 seconds 
