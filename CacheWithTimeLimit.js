@@ -60,3 +60,23 @@ TimeLimitedCache.prototype.count = function () {
     }
     return count;
 };
+
+
+
+
+
+
+// Example usage:
+const timeLimitedCache = new TimeLimitedCache();
+
+console.log(timeLimitedCache.set(1, 42, 1000)); 
+console.log(timeLimitedCache.get(1));
+console.log(timeLimitedCache.count());
+
+
+
+// After 1000ms
+setTimeout(() => {
+    console.log(timeLimitedCache.get(1));
+    console.log(timeLimitedCache.count());
+}, 1000);
