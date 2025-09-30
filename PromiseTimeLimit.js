@@ -23,3 +23,11 @@ var timeLimit = function (fn, t) {
     });
   };
 };
+
+// Example usage:
+const TimeLimit = timeLimit(
+  (n) => new Promise((resolve) => setTimeout(() => resolve("Done!"), n)),
+  100
+);
+
+TimeLimit(50).then(console.log).catch(console.log);
