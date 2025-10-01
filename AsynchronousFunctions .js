@@ -39,7 +39,6 @@ var promiseAll = function(functions) {
 
 
 // Example usage:
-/**
- * const promise = promiseAll([() => new Promise(res => res(42))])
- * promise.then(console.log); // [42]
- */
+const asyncFn1 = () => new Promise(res =>setTimeout(() => res(1), 300));
+
+promiseAll[asyncFn1,() => Promise.resolve(2), () => Promise.resolve(3)]
