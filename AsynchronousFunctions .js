@@ -36,6 +36,9 @@ var promiseAll = function(functions) {
     })
 };
 
+
+
+// Example usage:
 /**
  * const promise = promiseAll([() => new Promise(res => res(42))])
  * promise.then(console.log); // [42]
