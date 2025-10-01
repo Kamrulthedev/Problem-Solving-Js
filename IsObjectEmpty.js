@@ -15,3 +15,6 @@ var isEmpty = function(obj) {
 };
 
 
+
+// Example usage:
+console.log(isEmpty({}));
