@@ -46,3 +46,6 @@ const asyncFn3 = () => new Promise((res, rej) => setTimeout(() => rej("Error at 
 promiseAll([asyncFn1, asyncFn2, asyncFn3])
   .then(result => console.log("Resolved:", result))
   .catch(err => console.log("Rejected:", err));
+
+
+  console.log(".................")
