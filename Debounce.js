@@ -6,11 +6,19 @@
  * @return {Function}
  */
 var debounce = function(fn, t) {
+    let timeoutId;
+
+
     return function(...args) {
-        return new Promise((resolve, reject) => {
-            
-        })
-    }
+
+        clearTimeout(timeoutId);
+
+        return new Promise((resolve) => {
+             timeoutId = setTimeout(() =>{
+                resolve(fn(...args));
+             }, t);
+        });
+    };
 };
 
 /**
