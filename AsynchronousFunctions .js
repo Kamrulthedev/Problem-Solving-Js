@@ -16,9 +16,23 @@ var promiseAll = function(functions) {
 
                 results[index] = value;
                 completed++;
-                
+
+                if(completed === functions.length){
+                    resolve(results);
+                }
             })
-        })
+            .catch(err => {
+                if(!hasError){
+                    hasError = true;
+                    reject(err);
+                }
+            });
+
+        });
+
+        if(functions.length === 0) {
+            resolve([]);
+        }
     })
 };
 
