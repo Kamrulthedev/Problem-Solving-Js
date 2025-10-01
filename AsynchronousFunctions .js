@@ -39,6 +39,10 @@ var promiseAll = function(functions) {
 
 
 // Example usage:
-const asyncFn1 = () => new Promise(res =>setTimeout(() => res(1), 300));
+const asyncFn1 = () => new Promise(res => setTimeout(() => res("A"), 300));
+const asyncFn2 = () => new Promise(res => setTimeout(() => res("B"), 200));
+const asyncFn3 = () => new Promise((res, rej) => setTimeout(() => rej("Error at C"), 100));
 
-promiseAll[asyncFn1,() => Promise.resolve(2), () => Promise.resolve(3)]
+promiseAll([asyncFn1, asyncFn2, asyncFn3])
+  .then(result => console.log("Resolved:", result))
+  .catch(err => console.log("Rejected:", err));
