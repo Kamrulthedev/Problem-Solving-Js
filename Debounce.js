@@ -1,3 +1,5 @@
+// Debounce Function
+
 /**
  * @param {Function} fn
  * @param {number} t milliseconds
