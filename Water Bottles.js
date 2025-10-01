@@ -20,3 +20,5 @@ var numWaterBottles = function (numBottles, numExchange){
     return totalDrank;
 };
 
+// Example usage:
+console.log(numWaterBottles(9, 3));
