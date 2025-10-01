@@ -6,9 +6,10 @@
  * @return {Function}
  */
 var debounce = function(fn, t) {
-    
     return function(...args) {
-        
+        return new Promise((resolve, reject) => {
+            
+        })
     }
 };
 
