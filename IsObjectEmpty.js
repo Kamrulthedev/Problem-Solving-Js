@@ -17,4 +17,4 @@ var isEmpty = function(obj) {
 
 
 // Example usage:
-console.log(isEmpty({}));
+console.log(isEmpty({a: 3}));
