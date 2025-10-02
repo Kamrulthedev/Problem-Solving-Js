@@ -24,3 +24,7 @@ console.log(decimalRepresentation(2321));
 console.log(decimalRepresentation(102)); 
 console.log(decimalRepresentation(11));  
 console.log(decimalRepresentation(7));  
+
+
+
+// Output: 
