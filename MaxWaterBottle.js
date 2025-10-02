@@ -16,3 +16,6 @@ var maxBottlesDrunk = function(numBottles, numExchange) {
 
   return total;
 };
+
+
+// Example usage
