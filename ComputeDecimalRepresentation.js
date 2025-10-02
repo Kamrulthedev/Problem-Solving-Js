@@ -22,4 +22,5 @@ var decimalRepresentation = function (n) {
 // Example usage: 
 console.log(decimalRepresentation(2321));
 console.log(decimalRepresentation(102)); // Output: [100, 2]
+console.log(decimalRepresentation(11));  // Output: [10, 1]
 
