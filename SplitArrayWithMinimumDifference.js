@@ -43,3 +43,15 @@ var splitArray = function(nums) {
 
 
 
+// Example usage:
+nums = [1, 2, 3, 4, 5, 6];
+prefixSum = [1, 2, 3, 4, 5, 6]; 
+
+inc = [false, true, true, true, true, true];
+dec = [false, false, false, false, true, true];
+
+// Check splits;
+// i=0: inc[0]=true, dec[1]=false ❌
+// i=1: inc[1]=true, dec[2]=true ✅ leftSum=4, rightSum=11 → diff=7
+// i=2: inc[2]=true, dec[3]=true ✅ leftSum=9, rightSum=6 → diff=3
+// i=3: inc[3]=false ❌
