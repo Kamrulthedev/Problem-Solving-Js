@@ -1,3 +1,5 @@
+// Compute Decimal Representation
+
 /**
  * @param {number} n
  * @return {number[]}
