@@ -19,3 +19,5 @@ var decimalRepresentation = function (n) {
 };
 
 
+// Example usage: 
+console.log(decimalRepresentation(2321));
