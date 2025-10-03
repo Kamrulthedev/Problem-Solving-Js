@@ -18,6 +18,12 @@ var trapRainWater = function(heightMap) {
     const minPriorityQueue = require("@datastructures-js/priority-queue").minPriorityQueue;
     const heap = new minPriorityQueue({priority: x => x[0]});
 
-    
+
+    // Step 1: Push All The boundary cells into the min-heap and mark them as visited
+    for(let i = 0; i < m; i++){
+        for(let j of [0, n - 1]){
+           heap.enqueue([heightMap[i][j], i, j]);
+        }
+    }
 
 }
