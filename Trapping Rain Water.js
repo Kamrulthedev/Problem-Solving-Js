@@ -52,6 +52,12 @@ var trapRainWater = function (heightMap) {
         ny = y + dy;
         if (nx < 0 || nx >= m || ny < 0 || ny >= n || visited[nx][ny]) continue;
         visited[nx][ny] = true;
+
+        // if neighbor cell is lower, we can trap water
+        if(heightMap[nx][ny] < n) {
+            water += h - heightMap[nx][ny];
+        }
+        
     }
   }
 };
