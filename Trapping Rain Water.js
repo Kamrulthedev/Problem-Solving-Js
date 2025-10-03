@@ -50,18 +50,29 @@ var trapRainWater = function (heightMap) {
     for (let [dx, dy] of dirs) {
       const nx = x + dx,
         ny = y + dy;
-        if (nx < 0 || nx >= m || ny < 0 || ny >= n || visited[nx][ny]) continue;
-        visited[nx][ny] = true;
+      if (nx < 0 || nx >= m || ny < 0 || ny >= n || visited[nx][ny]) continue;
+      visited[nx][ny] = true;
 
-        // if neighbor cell is lower, we can trap water
-        if(heightMap[nx][ny] < n) {
-            water += h - heightMap[nx][ny];
-        }
+      // if neighbor cell is lower, we can trap water
+      if (heightMap[nx][ny] < n) {
+        water += h - heightMap[nx][ny];
+      }
 
-        // push the max height between current cell and heighbor cell
-        heap.enqueue([Math.max(h, heightMap[nx][ny], nx, ny)]);
+      // push the max height between current cell and heighbor cell
+      heap.enqueue([Math.max(h, heightMap[nx][ny], nx, ny)]);
     }
   }
 
   return water;
 };
+
+
+
+
+// Exmple usage:
+console.log(trapRainWater([
+    [1,2,3,4,5,6,7],
+    [2,1,3,2,1,3,0],
+    [3,4,2,4,,5,6,7]
+]));
+
