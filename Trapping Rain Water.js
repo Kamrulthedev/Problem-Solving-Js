@@ -50,7 +50,8 @@ var trapRainWater = function (heightMap) {
     for (let [dx, dy] of dirs) {
       const nx = x + dx,
         ny = y + dy;
-        
+        if (nx < 0 || nx >= m || ny < 0 || ny >= n || visited[nx][ny]) continue;
+        visited[nx][ny] = true;
     }
   }
 };
