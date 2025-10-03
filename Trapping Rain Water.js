@@ -27,8 +27,15 @@ var trapRainWater = function(heightMap) {
         }
     }
 
-    for(let j = 0; j < n; j++){
-        
+    for (let j = 0; j < n; j++) {
+        for (let i of [0, m - 1]) {
+            if (!visited[i][j]) {
+                heap.enqueue([heightMap[i][j], i, j]);
+                visited[i][j] = true;
+            }
+        }
     }
+
+
 
 }
