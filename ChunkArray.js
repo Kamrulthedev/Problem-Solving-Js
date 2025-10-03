@@ -11,3 +11,7 @@ var chunk = function (arr, size) {
   }
   return result;
 };
+
+
+// Example usage:
+console.log(chunk([1,2,3,,4,5], 2));
