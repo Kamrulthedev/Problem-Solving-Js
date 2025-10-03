@@ -62,4 +62,6 @@ var trapRainWater = function (heightMap) {
         heap.enqueue([Math.max(h, heightMap[nx][ny], nx, ny)]);
     }
   }
+
+  return water;
 };
