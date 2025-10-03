@@ -36,6 +36,11 @@ var trapRainWater = function(heightMap) {
         }
     }
 
+    // Step 2 : BFS expansion 
+    const dirs = [[1, 0], [-1, 0], [0, 1], [0, -1]];
+    let water = 0;
+
+    
 
 
 }
