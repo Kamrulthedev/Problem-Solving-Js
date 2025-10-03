@@ -23,7 +23,12 @@ var trapRainWater = function(heightMap) {
     for(let i = 0; i < m; i++){
         for(let j of [0, n - 1]){
            heap.enqueue([heightMap[i][j], i, j]);
+           visited[i][j] = true;
         }
+    }
+
+    for(let j = 0; j < n; j++){
+        
     }
 
 }
