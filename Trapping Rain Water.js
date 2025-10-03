@@ -57,7 +57,9 @@ var trapRainWater = function (heightMap) {
         if(heightMap[nx][ny] < n) {
             water += h - heightMap[nx][ny];
         }
-        
+
+        // push the max height between current cell and heighbor cell
+        heap.enqueue([Math.max(h, heightMap[nx][ny], nx, ny)]);
     }
   }
 };
