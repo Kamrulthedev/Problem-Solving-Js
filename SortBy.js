@@ -10,3 +10,5 @@ var sortBy = function(arr, fn) {
 };
 
 
+// Example usage:
+console.log(sortBy([1, 2, 3, 4, 5], n => -n));
