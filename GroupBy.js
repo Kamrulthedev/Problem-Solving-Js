@@ -17,6 +17,5 @@ Array.prototype.groupBy = function (fn) {
   return result;
 };
 
-/**
- * [1,2,3].groupBy(String) // {"1":[1],"2":[2],"3":[3]}
- */
+// Example usage:
+console.log([1, 2, 3, 4, 5].groupBy(String));
