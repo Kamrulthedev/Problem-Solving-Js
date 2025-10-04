@@ -5,7 +5,7 @@
  * @return {Object}
  */
 Array.prototype.groupBy = function (fn) {
-  const result = [];
+  const result = {};
 
   for (const item of this) {
     const key = fn(item);
