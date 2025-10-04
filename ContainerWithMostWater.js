@@ -17,9 +17,14 @@ var maxArea = function(height) {
         const area = h * w;
         maxWater = Math.max(maxWater,area);
 
-        // 
+        // small height 
+        if(height[left] < height[right]){
+            left++;
+        }else{
+            right--;
+        }
     }
-
+    return maxWater;
 };
 
 
