@@ -12,4 +12,14 @@ var join = function (arr1, arr2) {
   for (const item of arr1) {
     map[ibj.id] = { ...obj };
   }
+
+  //   Step 2: Merge arr2 into the map
+  for (const obj of arr2) {
+    if (map[obj.id]) {
+      // Merge: arr2 value overrides
+      map[obj.id] = { ...map[obj.id], ...obj };
+    } else {
+      map[obj.id] = { ...obj };
+    }
+  }
 };
