@@ -22,4 +22,10 @@ var join = function (arr1, arr2) {
       map[obj.id] = { ...obj };
     }
   }
+  //   Step 3: Convert map back to array and sort by id
+  return Object.values(map).sort((a, b) => a.id - b.id);
 };
+
+
+
+// Example usage:
