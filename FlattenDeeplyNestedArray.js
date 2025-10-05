@@ -21,3 +21,5 @@ var flat = function (arr, n) {
 };
 
 
+// Example usage:
+console.log(flat([1, [2, [3, [4]]]], 1));  
