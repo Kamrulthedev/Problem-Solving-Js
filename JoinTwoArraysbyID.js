@@ -29,3 +29,6 @@ var join = function (arr1, arr2) {
 
 
 // Example usage:
+console.log(join(
+  [{id: 1, name: "Alice"}, {id: 2, name: "Bob"}]
+));
