@@ -13,6 +13,17 @@ class EventEmitter {
                 if(!this.events[eventName]){
                     this.events[eventName] = [];
                 }
+
+                this.events[eventName].push(callback);
+
+                return{
+                    unsubscribe: () => {
+                        this.events[eventName] = this.events[eventName].filter(cb => cb !== callback);
+                        if(this.events[eventName].length === 0){
+                            delete
+                        }
+                    }
+                }
             }
         };
     }
