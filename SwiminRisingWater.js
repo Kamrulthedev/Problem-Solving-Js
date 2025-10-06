@@ -38,3 +38,11 @@ var swimInWater = function (grid) {
   //   return -1 if no path found
   return -1;
 };
+
+// Example usage:
+console.log(
+  swimInWater([
+    [0, 2],
+    [1, 3],
+  ])
+);
