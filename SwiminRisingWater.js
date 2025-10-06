@@ -16,4 +16,13 @@ var swimInWater = function (grid) {
 
   //   Min-Heap implementation
   const pq = new MinPriorityQueue({ priority: x[0] });
+  pq.enqueue([grid[0][0], 0, 0]);
+  visited[0][0] = true;
+
+//   Create a While Loop to process the queue
+while(!pq.isEmpty()){
+   const [t, r, c] = pq.dequeue().element;
+
+   
+}
 };
