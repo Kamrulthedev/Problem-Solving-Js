@@ -1,50 +1,53 @@
 // Event Emitter
 
 class EventEmitter {
-  /**
-   * @param {string} eventName
-   * @param {Function} callback
-   * @return {Object}
-   */
+    constructor() {
+        // Map from eventName -> array of callbacks (in subscription order)
+        this.events = new Map();
+    }
 
-  constructor() {
-    this.events = {}; // ✅ Initialize here to fix the error
-  }
-
-  subscribe(eventName, callback) {
-    return {
-      unsubscribe: () => {
-        if (!this.events[eventName]) {
-          this.events[eventName] = [];
+    /**
+     * @param {string} eventName
+     * @param {Function} callback
+     * @return {Object}
+     */
+    subscribe(eventName, callback) {
+        if (!this.events.has(eventName)) {
+            this.events.set(eventName, []);
         }
-
-        this.events[eventName].push(callback);
+        this.events.get(eventName).push(callback);
 
         return {
-          unsubscribe: () => {
-            this.events[eventName] = this.events[eventName].filter(
-              (cb) => cb !== callback
-            );
-            if (this.events[eventName].length === 0) {
-              delete this.events[eventName];
+            unsubscribe: () => {
+                const arr = this.events.get(eventName);
+                if (!arr) return undefined;
+                const idx = arr.indexOf(callback);
+                if (idx !== -1) arr.splice(idx, 1);
+                if (arr.length === 0) this.events.delete(eventName);
+                return undefined;
             }
-            return undefined;
-          },
         };
-      },
-    };
-  }
+    }
 
-  /**
-   * @param {string} eventName
-   * @param {Array} args
-   * @return {Array}
-   */
-  emit(eventName, args = []) {
-    if (!this.events[eventName]) return [];
-    return this.events[eventName].map((cb) => cb(...args));
-  }
+    /**
+     * @param {string} eventName
+     * @param {Array} args
+     * @return {Array}
+     */
+    emit(eventName, args = []) {
+        if (!this.events.has(eventName)) return [];
+        // IMPORTANT: make a snapshot so mutations during emission do not affect this call
+        const listeners = [...this.events.get(eventName)];
+        const results = [];
+        for (const cb of listeners) {
+            results.push(cb(...args));
+        }
+        return results;
+    }
 }
+
+
+
 
 // Exmpale usage:
 const emitter = new EventEmitter();
