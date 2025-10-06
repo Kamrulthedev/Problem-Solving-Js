@@ -20,8 +20,9 @@ class EventEmitter {
                     unsubscribe: () => {
                         this.events[eventName] = this.events[eventName].filter(cb => cb !== callback);
                         if(this.events[eventName].length === 0){
-                            delete
+                            delete this.events[eventName];
                         }
+                        return undefined;
                     }
                 }
             }
