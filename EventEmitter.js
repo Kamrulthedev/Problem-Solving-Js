@@ -8,10 +8,11 @@ class EventEmitter {
      * @return {Object}
      */
     subscribe(eventName, callback) {
-        
         return {
             unsubscribe: () => {
-                
+                if(!this.events[eventName]){
+                    this.events[eventName] = [];
+                }
             }
         };
     }
