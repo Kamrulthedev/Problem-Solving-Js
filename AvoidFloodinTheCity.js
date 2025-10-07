@@ -42,3 +42,15 @@ var avoidFlood = function (rains) {
   }
   return ans;
 };
+
+
+
+// Example usage:
+console.log(avoidFlood([1,2,0,0,2,1]));
+// ✅ [-1, -1, 2, 1, -1, -1]
+
+console.log(avoidFlood([1,2,3,4]));
+// ✅ [-1, -1, -1, -1] (no zeros, no flood)
+
+console.log(avoidFlood([1,2,0,1,2]));
+// ✅ []
