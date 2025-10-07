@@ -28,9 +28,12 @@ var avoidFlood = function(rains) {
             for(let j = 0; j < dryDays.length; j++){
                 if(dryDays[j] > last){
                     dryIndex = dryDays[j];
-                    
+                    dryDays.splice(j, 1);
+                    break;
                 }
             }
+
+            
         }
     }
 };
