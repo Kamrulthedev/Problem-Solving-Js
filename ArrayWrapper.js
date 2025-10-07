@@ -19,6 +19,9 @@ ArrayWrapper.prototype.valueOf = function() {
  * @return {string}
  */
 ArrayWrapper.prototype.toString = function() {
-    
+    return `[${this.nums.join(',')}]`;
 }
+
+
+
 
