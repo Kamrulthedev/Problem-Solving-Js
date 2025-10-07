@@ -20,6 +20,12 @@ var removeSubstring = function(s, k) {
 };
 
 
+// Example Walkthrough:
+s = "((()))", k = 3
+
+
+
+
 
 
 
