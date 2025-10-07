@@ -62,4 +62,20 @@ class Calculator {
     getResult() {
         return this.result;
     }
-}
+};
+
+
+
+
+// Example usage:
+const calculator = new Calculator(10);
+
+const result = calculator
+.add(5)
+.subtract(3)
+.multiply(4)
+.divide(2)
+.power(2)
+.getResult();
+
+console.log(result);
