@@ -23,5 +23,6 @@ ArrayWrapper.prototype.toString = function() {
 }
 
 
-
+// Example usage:
+const objt = new ArrayWrapper([1, 2]);
 
