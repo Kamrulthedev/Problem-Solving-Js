@@ -16,3 +16,7 @@ var twoSum = function(nums, target) {
        map.set(nums[i], i);
     }
 };
+
+
+// Example usage:
+console.log(twoSum([2, 7, 5], 9));
