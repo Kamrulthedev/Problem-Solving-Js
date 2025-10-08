@@ -31,3 +31,4 @@ var successfulPairs = function(spells, potions, success) {
 
 
 // Example usage:
+console.log(successfulPairs([4, 5, 3], [1,2,3,4,5], 7));
