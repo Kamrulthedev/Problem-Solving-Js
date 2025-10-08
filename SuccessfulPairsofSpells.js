@@ -27,3 +27,7 @@ var successfulPairs = function(spells, potions, success) {
     }
     return result;
 };
+
+
+
+// Example usage:
