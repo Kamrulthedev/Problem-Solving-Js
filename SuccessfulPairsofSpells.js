@@ -7,5 +7,13 @@
  * @return {number[]}
  */
 var successfulPairs = function(spells, potions, success) {
-    
+    potions.sort((a,b)=> a - b);
+    const n = potions.length;
+    const result = [];
+
+    for(let spell of spells){
+        let left = 0, rigth = n -1, idx = n;
+        
+        
+    }
 };
