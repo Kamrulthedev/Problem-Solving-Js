@@ -39,4 +39,5 @@ var minTime = function(skill, mana) {
 
 
 // Example usage: 
+console.log(minTime([2,3], [3,4]));
 
