@@ -10,7 +10,6 @@ var minTime = function(skill, mana) {
     const skillB = skill.map(x => BigInt(x));
     const manaB = mana.map(x => BigInt(x));
 
-    // prefix sums of skills: pre[i] = sum_{k< i} skill[k]  (pre[0]=0)
     const pre = new Array(n + 1).fill(0n);
     for (let i = 0; i < n; i++) pre[i+1] = pre[i] + skillB[i];
 
@@ -19,7 +18,6 @@ var minTime = function(skill, mana) {
 
     for (let j = 0; j < m; j++) {
         const mj = manaB[j];
-        // Compute S = max_i (F[i] - mj * pre[i])
         let S = (F[0] - mj * pre[0]);
         for (let i = 1; i < n; i++) {
             const cand = F[i] - mj * pre[i];
@@ -38,3 +36,7 @@ var minTime = function(skill, mana) {
         return Number(ansBig);
     }
 };
+
+
+// Example usage: 
+
