@@ -21,5 +21,5 @@ var maximumEnergy = function(energy, k) {
 };
 
 // Example usage:
-console.log(maximumEnergy([2, 3, 4, 5, 6], 5));
+console.log(maximumEnergy([2, 3, 4, 5, 6, 99], 5));
 
