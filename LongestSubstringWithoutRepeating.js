@@ -21,3 +21,5 @@ var lengthOfLongestSubstring = function (s) {
 
 
 // Example usage:
+let s = "09";
+console.log(lengthOfLongestSubstring(s)); 
