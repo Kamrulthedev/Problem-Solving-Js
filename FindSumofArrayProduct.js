@@ -43,3 +43,8 @@ var magicalSum = function(m, k, nums) {
 function countBits(x){
     return x.toString(2).split("1").length - 1;   
 }
+
+
+
+// Example usage:
+console.log(magicalSum(2, 1, [2, 3]));
