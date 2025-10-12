@@ -38,3 +38,8 @@ var magicalSum = function(m, k, nums) {
     }
     return res;
 };
+
+
+function countBits(x){
+    return x.toString(2).split("1").length - 1;   
+}
