@@ -19,3 +19,7 @@ var removeAnagrams = function(words) {
     }
     return result;
 };
+
+
+// exmaple usage:
+console.log(removeAnagrams(["abba", "baba", "Mama"]));
