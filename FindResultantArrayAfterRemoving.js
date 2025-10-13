@@ -9,6 +9,13 @@ var removeAnagrams = function(words) {
         const prev = result[result.length - 1];
         const curr = words[i];
 
-        
+        // two words sorted form defarence
+        const sortedPrev = prev.split('').sort().join('');
+        const sortedCurr = curr.split('').sort().join('');
+
+        if(sortedPrev !== sortedCurr){
+            result.push(curr);
+        }
     }
+    
 };
