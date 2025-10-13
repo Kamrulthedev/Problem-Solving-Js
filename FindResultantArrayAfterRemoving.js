@@ -17,5 +17,5 @@ var removeAnagrams = function(words) {
             result.push(curr);
         }
     }
-    
+    return result;
 };
