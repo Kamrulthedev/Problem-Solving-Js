@@ -6,6 +6,7 @@
 var hasIncreasingSubarrays = function(nums, k) {
     const n = nums.length;
 
+    // Create a in increasing 
     const isIncreasing = (start) => {
         for (let i = start; i < start + k - 1; i++) {
             if (nums[i] >= nums[i + 1]) return false;
