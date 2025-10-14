@@ -19,7 +19,7 @@ var hasIncreasingSubarrays = function(nums, k) {
             return true;
         }
     }
-
+// return this false
     return false;
 };
 
