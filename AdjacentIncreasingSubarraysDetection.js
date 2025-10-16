@@ -14,6 +14,7 @@ var hasIncreasingSubarrays = function(nums, k) {
         return true;
     };
 
+    // Create  a for loop
     for (let i = 0; i + 2 * k <= n; i++) {
         if (isIncreasing(i) && isIncreasing(i + k)) {
             return true;
@@ -26,4 +27,3 @@ var hasIncreasingSubarrays = function(nums, k) {
 
 // Example usage:
 console.log(hasIncreasingSubarrays([1,2,3,4,5,6], 2));
-console.log(hasIncreasingSubarrays([1,3,2,4,5,6], 2));
