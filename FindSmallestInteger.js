@@ -28,4 +28,4 @@ var findSmallestInteger = function (nums, value) {
 
 
 // Example usage;
-console.log(findSmallestInteger([1,2,3,4,5], 3));
+console.log(findSmallestInteger([1,2,3,4,4,4,5], 3, 5, 6, 6, 6));
