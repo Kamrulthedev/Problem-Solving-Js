@@ -20,3 +20,7 @@ var maxDistinctElements = function(nums, k) {
 
     return count;
 };
+
+
+// Example usage:
+console.log(maxDistinctElements([1,2,2,3], 1)); 
