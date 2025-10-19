@@ -22,5 +22,23 @@ var findLexSmallestString = function(s, a, b) {
            const n = str.slice(n - b) + str.slice(0, n - b);
     };
 
+    // Dfs
+    const dfs = (str) =>{
+        if(visited.has(str)) return;
+        visited.add(str);
+
+        if(str < smallest) smallest = str;
+
+        const added = addOperation(str);
+        const rotated = rotateOperation(str);
+
+        dfs(added);
+        dfs(rotated);
+    };
+
+    dfs(s);
+    return smallest;
 
 };
+
+
