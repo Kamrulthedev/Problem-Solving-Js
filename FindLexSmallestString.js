@@ -41,5 +41,6 @@ var findLexSmallestString = function (s, a, b) {
   return smallest;
 };
 
+
 // Example usage:
 console.log(findLexSmallestString("4353", 9, 4));
