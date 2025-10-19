@@ -29,7 +29,7 @@ var longestPalindrome = function(s) {
 
 
 
-// Exmple usage:
+// Exmple usage:    
 console.log(longestPalindrome("babad"));
 console.log(longestPalindrome("cbbd"));
 console.log(longestPalindrome("a"));
