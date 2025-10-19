@@ -28,3 +28,10 @@ var longestPalindrome = function(s) {
 };
 
 
+
+// Exmple usage:
+console.log(longestPalindrome("babad")); // Output: "bab" or "aba"
+console.log(longestPalindrome("cbbd"));  // Output: "bb"
+console.log(longestPalindrome("a"));     // Output: "a"
+console.log(longestPalindrome("ac"));    // Output: "a" or "c"
+
