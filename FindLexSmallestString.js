@@ -15,7 +15,12 @@ var findLexSmallestString = function(s, a, b) {
             arr[i] = ((+arr[i] + a) % 10).toString();
         }
         return arr.join('')
-    }
+    };
 
-    const 
+    // Rotate Operation
+    const rotateOperation = (str) => {
+           const n = str.slice(n - b) + str.slice(0, n - b);
+    };
+
+
 };
