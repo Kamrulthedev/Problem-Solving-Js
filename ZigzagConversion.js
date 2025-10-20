@@ -19,3 +19,9 @@ var convert = function(s, numRows) {
     }
     return rows.join('');
 };
+
+
+// Example usage: 
+console.log(convert("PAYPALISHIRING", 3)); // Output: "PAHNAPLSIIGYIR"
+console.log(convert("PAYPALISHIRING", 4)); // Output: "PINALSIGYAHRPI"
+console.log(convert("A", 1));              // Output: "A"
