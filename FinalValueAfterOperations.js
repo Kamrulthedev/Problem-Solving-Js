@@ -16,3 +16,4 @@ var finalValueAfterOperations = function(operations) {
 };
 
 
+// Example usage:
