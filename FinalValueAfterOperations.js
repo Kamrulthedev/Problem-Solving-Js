@@ -17,3 +17,5 @@ var finalValueAfterOperations = function(operations) {
 
 
 // Example usage:
+console.log(finalValueAfterOperations(["--X","X++","X++"])); 
+// Output: 1
