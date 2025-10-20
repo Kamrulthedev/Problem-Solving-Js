@@ -13,3 +13,6 @@ var reverse = function(x) {
     return reversed;
 };
 
+
+// Example usage:
+console.log(reverse(123));
