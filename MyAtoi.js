@@ -36,3 +36,12 @@ let result = 0;
 
     return result;
 };
+
+
+
+// Example usage:
+console.log(myAtoi("42"));              // ➜ 42
+console.log(myAtoi("   -42"));          // ➜ -42
+console.log(myAtoi("4193 with words")); // ➜ 4193
+console.log(myAtoi("words and 987"));   // ➜ 0
+console.log(myAtoi("-91283472332"));    // ➜ -2147483648 (clamped)
