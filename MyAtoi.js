@@ -11,6 +11,10 @@ let i = 0;
 let result = 0;
 
 
-
+// Step 2: Check for sign
+  if (s[i] === '+' || s[i] === '-') {
+        if (s[i] === '-') sign = -1;
+        i++;
+    }
 
 };
