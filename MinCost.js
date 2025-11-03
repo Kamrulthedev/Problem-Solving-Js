@@ -19,5 +19,8 @@ var minCost = function(colors, neededTime) {
 };
 
 
+console.log(minCost("abaac", [1,2,3,4,5])); // Output: 3
+console.log(minCost("abc", [1,2,3]));       // Output: 0
+console.log(minCost("aabaa", [1,2,3,4,1])); // Output: 2
 
 
