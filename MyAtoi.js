@@ -26,4 +26,13 @@ let result = 0;
 
     result *= sign;
 
+
+    // Step 4: Clamp within 32-bit signed integer range
+    const INT_MAX = 2147483647;
+    const INT_MIN = -2147483648;
+
+    if (result > INT_MAX) return INT_MAX;
+    if (result < INT_MIN) return INT_MIN;
+
+    return result;
 };
