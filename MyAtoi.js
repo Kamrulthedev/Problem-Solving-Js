@@ -3,7 +3,8 @@
  * @return {number}
  */
 var myAtoi = function(s) {
-    s = s.trim();// Step 1: Remove leading/trailing spaces
+    // Step 1: Remove leading/trailing spaces
+    s = s.trim();
     if(s.length === 0) return 0;
 
 let sign = 1;
@@ -42,6 +43,6 @@ let result = 0;
 // Example usage:
 console.log(myAtoi("42"));              // ➜ 42
 console.log(myAtoi("   -42"));          // ➜ -42
-console.log(myAtoi("4193 with words")); // ➜ 4193
-console.log(myAtoi("words and 987"));   // ➜ 0
-console.log(myAtoi("-91283472332"));    // ➜ -2147483648 (clamped)
+console.log(myAtoi("4193 with words"));
+console.log(myAtoi("words and 987"));   
+console.log(myAtoi("-91283472332"));    
