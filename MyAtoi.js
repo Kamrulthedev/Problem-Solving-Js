@@ -17,4 +17,13 @@ let result = 0;
         i++;
     }
 
+
+ // Step 3: Process digits
+    while (i < s.length && s[i] >= '0' && s[i] <= '9') {
+        result = result * 10 + (s[i].charCodeAt(0) - '0'.charCodeAt(0));
+        i++;
+    }
+
+    result *= sign;
+
 };
