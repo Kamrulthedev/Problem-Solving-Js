@@ -14,7 +14,9 @@ var findXSum = function (nums, k, x) {
 
 //   Count frequencies of elements in the current window
   for(let j = i; j < i + k; j++){
-    
+    freq.set(nums[j], (freq.get(nums[j]) || 0) + 1);
   }
+
+  
 
 };
