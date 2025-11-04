@@ -25,4 +25,17 @@ var findXSum = function (nums, k, x) {
     if (b[1] === a[1]) return b[0] - a[0];
     return b[1] - a[1];
   });
+
+
+  // Take top x and sum up (num * freq)
+        let sum = 0;
+        for (let t = 0; t < Math.min(x, arr.length); t++) {
+            const [num, count] = arr[t];
+            sum += num * count;
+        }
+
+        ans.push(sum);
+    }
+
+    return ans;
 };
