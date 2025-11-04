@@ -12,12 +12,17 @@ var findXSum = function (nums, k, x) {
     const freq = new Map();
   }
 
-//   Count frequencies of elements in the current window
-  for(let j = i; j < i + k; j++){
+  //   Count frequencies of elements in the current window
+  for (let j = i; j < i + k; j++) {
     freq.set(nums[j], (freq.get(nums[j]) || 0) + 1);
   }
 
-//   Convert frequency map to a sorted array of [element, frequency] pairs
-const arr = Array.from(freq.entries());
+  //   Convert frequency map to a sorted array of [element, frequency] pairs
+  const arr = Array.from(freq.entries());
 
+  //   Sort the array based on frequency (descending) and element value (ascending)
+  arr.sort((a, b) => {
+    if (b[1] === a[1]) return b[0] - a[0];
+    return b[1] - a[1];
+  });
 };
