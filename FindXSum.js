@@ -12,4 +12,9 @@ var findXSum = function (nums, k, x) {
     const freq = new Map();
   }
 
+//   Count frequencies of elements in the current window
+  for(let j = i; j < i + k; j++){
+    
+  }
+
 };
