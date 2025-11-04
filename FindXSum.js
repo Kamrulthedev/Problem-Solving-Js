@@ -4,7 +4,7 @@
  * @param {number} x
  * @return {number[]}
  */
-var findXSum = function(nums, k, x) {
+var findXSum = function(nums, k, x) {   
     const n = nums.length;
     const ans = [];
 
@@ -37,3 +37,11 @@ var findXSum = function(nums, k, x) {
 
     return ans;
 };
+
+
+
+// Example usage:
+console.log(findXSum([2, 3, 2, 5, 3], 3, 2)); // [7, 8, 8]
+console.log(findXSum([1,1,1,1], 2, 1)); // [2,2,2]
+console.log(findXSum([5,4,3,2,1], 3, 2)); // [9,7,5]
+
