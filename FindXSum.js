@@ -17,6 +17,7 @@ var findXSum = function (nums, k, x) {
     freq.set(nums[j], (freq.get(nums[j]) || 0) + 1);
   }
 
-  
+//   Convert frequency map to a sorted array of [element, frequency] pairs
+const arr = Array.from(freq.entries());
 
 };
