@@ -3,26 +3,35 @@
  * @return {number}
  */
 var minOperations = function(nums) {
-    let n = nums.length;
-    let i = 0;
-    let ops = 0;
+    const n = nums.length;
 
-    while (i < n) {
-        // skip zeros
-        if (nums[i] === 0) {
-            i++;
-            continue;
+    // Helper GCD function
+    const gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
+
+    // 1️⃣ Check overall gcd
+    let overall = nums[0];
+    for (let i = 1; i < n; i++) {
+        overall = gcd(overall, nums[i]);
+    }
+    if (overall !== 1) return -1;
+
+    // 2️⃣ Count existing 1s
+    let ones = nums.filter(x => x === 1).length;
+    if (ones > 0) return n - ones;
+
+    // 3️⃣ Find smallest subarray with gcd == 1
+    let minLen = Infinity;
+    for (let i = 0; i < n; i++) {
+        let g = nums[i];
+        for (let j = i + 1; j < n; j++) {
+            g = gcd(g, nums[j]);
+            if (g === 1) {
+                minLen = Math.min(minLen, j - i + 1);
+                break;
+            }
         }
-
-        // we are at start of a non-zero contiguous segment
-        const seen = new Set();
-        while (i < n && nums[i] !== 0) {
-            seen.add(nums[i]);
-            i++;
-        }
-
-        ops += seen.size;
     }
 
-    return ops;
+    // Total operations = (minLen - 1) + (n - 1)
+    return (minLen - 1) + (n - 1);
 };
