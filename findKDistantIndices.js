@@ -31,3 +31,11 @@ var findKDistantIndices = function(nums, key, k) {
     return [...result].sort((a, b) => a - b);
 
 };
+
+
+
+// Example usage:
+nums = [3,4,9,1,3,9,5]
+key = 9
+k = 1
+console.log(findKDistantIndices(nums, key, k));
