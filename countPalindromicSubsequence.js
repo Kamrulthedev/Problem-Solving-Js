@@ -18,5 +18,6 @@ var countPalindromicSubsequence = function (s) {
   let result = 0;
 
 
-  
+//   Step 2 : check for each character if it can form a palindromic subsequence
+
 };
