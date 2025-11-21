@@ -19,5 +19,11 @@ var countPalindromicSubsequence = function (s) {
 
 
 //   Step 2 : check for each character if it can form a palindromic subsequence
-
+for(let c =0; c < 26; c++){
+    if(first[c] < last[c]){
+        const seen = new Set();
+        // collect unique characters between first and last occurrence
+        
+    }
+}
 };
