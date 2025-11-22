@@ -3,7 +3,16 @@
  * @return {number}
  */
 var minimumOperations = function(nums) {
-    const uniqueNums = new Set(nums)
+    let operations = 0;
+
+    for (let num of nums) {
+        let r = num % 3;   
+        if (r !== 0) {
+            operations += 1;  
+        }
+    }
+
+    return operations;
 };
 
 
