@@ -43,3 +43,4 @@ var maxSumDivThree = function (nums) {
 
 // Example usage:
 nums = [3, 5, 3, 4, 2, 3];
+console.log(maxSumDivThree(nums));
