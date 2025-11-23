@@ -18,6 +18,11 @@ var maxSumDivThree = function (nums) {
   ram1.sort((a, b) => a - b);
   ram2.sort((a, b) => a - b);
 
+  //   If already divisible by 3
+  if (total % 3 === 0) return total;
 
-  
+
+  let ans = 0;
+
+//   Case 1: 
 };
