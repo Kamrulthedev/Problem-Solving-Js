@@ -24,5 +24,13 @@ var maxSumDivThree = function (nums) {
 
   let ans = 0;
 
-//   Case 1: 
+//   Case 1 > total % 3 === 1
+if(total % 3 === 1){
+    let option1 = ram1.length > 0 ? ram1[0] : Infinity;
+    let option2 = ram2.length > 1 ? ram2[0] + ram2[1] : Infinity;
+
+    ans = total - Math.min(option1, option2);
+}
+
+
 };
