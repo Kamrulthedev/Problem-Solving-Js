@@ -21,16 +21,21 @@ var maxSumDivThree = function (nums) {
   //   If already divisible by 3
   if (total % 3 === 0) return total;
 
-
   let ans = 0;
 
-//   Case 1 > total % 3 === 1
-if(total % 3 === 1){
+  //   Case 1 > total % 3 === 1
+  if (total % 3 === 1) {
     let option1 = ram1.length > 0 ? ram1[0] : Infinity;
     let option2 = ram2.length > 1 ? ram2[0] + ram2[1] : Infinity;
 
     ans = total - Math.min(option1, option2);
-}
+  }
+    // Case 2 → total % 3 == 2
+  else{
+    let option1 = ram2.length > 0 ? ram2[0] : Infinity;
+    let option2 = ram1.length > 1 ? ram1[0] + ram1[1]: Infinity;
+    ans =total - Math.min(option1, option2);
+      }
 
-
+      return ans;
 };
