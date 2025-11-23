@@ -8,5 +8,6 @@ var maxSumDivThree = function(nums) {
   let ram2 = [];
   
   
-//   Step 1: 
+//   Step 1: total sum + categorise remainders
+
 };
