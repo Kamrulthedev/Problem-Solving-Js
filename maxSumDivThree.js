@@ -30,12 +30,16 @@ var maxSumDivThree = function (nums) {
 
     ans = total - Math.min(option1, option2);
   }
-    // Case 2 → total % 3 == 2
-  else{
+  // Case 2 → total % 3 == 2
+  else {
     let option1 = ram2.length > 0 ? ram2[0] : Infinity;
-    let option2 = ram1.length > 1 ? ram1[0] + ram1[1]: Infinity;
-    ans =total - Math.min(option1, option2);
-      }
+    let option2 = ram1.length > 1 ? ram1[0] + ram1[1] : Infinity;
+    ans = total - Math.min(option1, option2);
+  }
 
-      return ans;
+  return ans;
 };
+
+
+// Example usage:
+nums = [3, 5, 3, 4, 2, 3];
