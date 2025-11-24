@@ -16,3 +16,14 @@ async function sleep(millis) {
     await sleep(50);
     console.log(Date.now() - t);
 })();
+
+
+
+
+
+// Eample uasge:
+(async () => {
+    console.log("Start");
+    await sleep(1000); // Pause for 1 second
+    console.log("End after 1 second");
+})();
