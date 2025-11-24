@@ -44,3 +44,12 @@ var splitArray = function(nums) {
 
 
 
+// Example usage:
+const nums1 = [1, 2, 3, 4, 5];
+console.log(splitArray(nums1)); // Output: 3
+
+const nums2 = [5, 4, 3, 2, 1];
+console.log(splitArray(nums2)); // Output: -1
+
+const nums3 = [1, 3, 2, 4, 5];
+console.log(splitArray(nums3)); // Output: 1
