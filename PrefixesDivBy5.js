@@ -12,3 +12,11 @@ var prefixesDivBy5 = function(nums) {
     }
     return answer;
 };
+
+
+
+// Example usage:
+const nums = [1, 0, 1]; // Binary representation of prefixes: [1, 10, 101]
+const result = prefixesDivBy5(nums);
+
+console.log(result); // Output: [false, false, true]
