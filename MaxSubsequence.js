@@ -19,3 +19,14 @@ var maxSubsequence = function(nums, k) {
     // return values only
     return picked.map(item => item[0]);
 };
+
+
+
+
+// Example usage:
+const nums = [2, 1, 3, 3];
+const k = 2;
+
+const result = maxSubsequence(nums, k);
+
+console.log(result); // Output: [3, 3]
