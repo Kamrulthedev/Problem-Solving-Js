@@ -17,8 +17,5 @@ var smallestRepunitDivByK = function(k) {
 
 
 // Example usage: 
-
 console.log(smallestRepunitDivByK(1)); // Output: 1
 console.log(smallestRepunitDivByK(3)); // Output: 3
-console.log(smallestRepunitDivByK(2)); // Output: -1
-console.log(smallestRepunitDivByK(7)); // Output: 6
