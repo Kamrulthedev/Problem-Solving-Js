@@ -29,3 +29,8 @@ var numSubseq = function(nums, target) {
 
     return result;
 };
+
+
+
+// Example usage:
+console.log(numSubseq([3, 4, 5, 6, 7]));
