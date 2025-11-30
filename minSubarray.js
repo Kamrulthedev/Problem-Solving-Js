@@ -28,3 +28,8 @@ var minSubarray = function(nums, p) {
 
     return result === nums.length ? -1 : result;
 };
+
+
+
+// Example usage:
+console.log(minSubarray([3, 1, 2, 3, 4, 5, 6], 8));
