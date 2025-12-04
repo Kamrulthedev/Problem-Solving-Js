@@ -19,3 +19,7 @@ var countCollisions = function(directions) {
 
     return collisions;
 };
+
+
+// Example usage:
+console.log(countCollisions("RLRSLL KAMRUL HASSAN"));
