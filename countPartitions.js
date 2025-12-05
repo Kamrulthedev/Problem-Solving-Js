@@ -25,5 +25,5 @@ var countPartitions = function (nums) {
 };
 
 // Example usage:
-console.log(countPartitions([1, 5, 11, 5])); // Output: 1 (Partition: [1, 5, 5] and [11])
+console.log(countPartitions([1, 5, 11, 5])); 
 
