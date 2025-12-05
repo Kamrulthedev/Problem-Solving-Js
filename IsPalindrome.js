@@ -16,9 +16,7 @@ var isPalindrome = function(x) {
 
 // Example usage:
 console.log(isPalindrome(121));   // true
-console.log(isPalindrome(-121));  // false
-console.log(isPalindrome(10));    // false
-console.log(isPalindrome(0));     // true
+
 
 
 
