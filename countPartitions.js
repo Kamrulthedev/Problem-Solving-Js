@@ -26,5 +26,4 @@ var countPartitions = function (nums) {
 
 // Example usage:
 console.log(countPartitions([1, 5, 11, 5])); // Output: 1 (Partition: [1, 5, 5] and [11])
-console.log(countPartitions([1, 2, 3, 5]));  // Output: 0 (No valid partition)
-console.log(countPartitions([2, 2, 2, 2]));  // Output: 3 (Multiple valid partitions)
+
