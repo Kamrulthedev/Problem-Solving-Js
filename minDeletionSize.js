@@ -37,3 +37,6 @@ var minDeletionSize = function(strs) {
 
     return deletions;
 };
+
+// Example usage:
+console.log(minDeletionSize(["ca", "bb", "ac"]));
