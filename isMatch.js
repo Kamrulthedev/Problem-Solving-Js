@@ -42,3 +42,9 @@ var isMatch = function(s, p) {
 
     return dp[m][n];
 };
+
+
+
+// Example usage:
+console.log(isMatch("aab", "c*a*b"));
+
