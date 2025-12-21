@@ -12,8 +12,6 @@ var isPalindrome = function(x) {
     return str === reversed;
 };
 
-
-
 // Example usage:
 console.log(isPalindrome(121));   // true
 
@@ -33,4 +31,7 @@ var isPalindrome = function(x) {
     // For odd digits: remove middle digit using Math.floor(reversed / 10)
     return x === reversed || x === Math.floor(reversed / 10);
 };
+
+// Example usage:
+console.log(isPalindrome(-121));
 
