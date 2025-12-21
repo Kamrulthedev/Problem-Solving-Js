@@ -20,3 +20,6 @@ var longestCommonPrefix = function(strs) {
 
 // Example usage:
 console.log(longestCommonPrefix(["flower", "flow", "flight"]))
+
+
+
