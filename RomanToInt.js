@@ -30,6 +30,10 @@ var romanToInt = function(s) {
 };
 
 
+// Example usage:
+
+
+
 
 // M  → +1000
 // C < M → -100
