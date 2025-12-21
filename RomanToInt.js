@@ -28,3 +28,13 @@ var romanToInt = function(s) {
 
     return total;
 };
+
+
+
+// M  → +1000
+// C < M → -100
+// M  → +1000
+// X < C → -10
+// C  → +100
+// I < V → -1
+// V  → +5
