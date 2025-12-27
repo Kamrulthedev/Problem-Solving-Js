@@ -19,4 +19,4 @@ var subarrayBitwiseORs = function(arr) {
 };
 
 
-// Example 
+// Example usage:
