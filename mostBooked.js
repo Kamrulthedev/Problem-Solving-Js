@@ -13,18 +13,17 @@ var mostBooked = function (n, meetings) {
   // Min heap for busy rooms: [endTime, room]
   const busy = [];
 
-      const count = new Array(n).fill(0);
+  const count = new Array(n).fill(0);
 
-
-      // Heap helpers
-    const heapPush = (heap, item, cmp) => {
-        heap.push(item);
-        let i = heap.length - 1;
-        while (i > 0) {
-            let p = Math.floor((i - 1) / 2);
-            if (cmp(heap[p], heap[i]) <= 0) break;
-            [heap[p], heap[i]] = [heap[i], heap[p]];
-            i = p;
-        }
-    };
+  // Heap helpers
+  const heapPush = (heap, item, cmp) => {
+    heap.push(item);
+    let i = heap.length - 1;
+    while (i > 0) {
+      let p = Math.floor((i - 1) / 2);
+      if (cmp(heap[p], heap[i]) <= 0) break;
+      [heap[p], heap[i]] = [heap[i], heap[p]];
+      i = p;
+    }
+  };
 };
