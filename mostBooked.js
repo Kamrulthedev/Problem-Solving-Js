@@ -12,4 +12,7 @@ var mostBooked = function (n, meetings) {
 
   // Min heap for busy rooms: [endTime, room]
   const busy = [];
+
+      const count = new Array(n).fill(0);
+
 };
