@@ -19,4 +19,4 @@ var generate = function(numRows) {
 };
 
 
-// Example
+// Example usage:
