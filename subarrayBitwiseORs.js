@@ -20,3 +20,4 @@ var subarrayBitwiseORs = function(arr) {
 
 
 // Example usage:
+console.log(subarrayBitwiseORs([0]));
