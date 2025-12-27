@@ -17,3 +17,6 @@ var subarrayBitwiseORs = function(arr) {
 
     return res.size;
 };
+
+
+// Example 
