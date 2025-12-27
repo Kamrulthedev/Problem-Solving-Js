@@ -46,6 +46,25 @@ const heapPop = (heap, cmp) => {
     };
 
 
+for (let [start, end] of meetings) {
+        // free rooms
+        while (busy.length && busy[0][0] <= start) {
+            const [_, room] = heapPop(busy, (a, b) => a[0] - b[0]);
+            heapPush(available, room, (a, b) => a - b);
+        }
+
+        const duration = end - start;
+
+        if (available.length) {
+            const room = heapPop(available, (a, b) => a - b);
+            heapPush(busy, [end, room], (a, b) => a[0] - b[0]);
+            count[room]++;
+        } else {
+            const [endTime, room] = heapPop(busy, (a, b) => a[0] - b[0]);
+            heapPush(busy, [endTime + duration, room], (a, b) => a[0] - b[0]);
+            count[room]++;
+        }
+    }
 
 
 
