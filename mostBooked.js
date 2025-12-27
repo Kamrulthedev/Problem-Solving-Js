@@ -67,5 +67,9 @@ for (let [start, end] of meetings) {
     }
 
 
-
+    let maxMeetings = Math.max(...count);
+    for (let i = 0; i < n; i++) {
+        if (count[i] === maxMeetings) return i;
+    }
 };
+
