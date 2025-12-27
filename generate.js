@@ -20,4 +20,4 @@ var generate = function(numRows) {
 
 
 // Example usage:
-console.log()
+console.log(generate(5));
