@@ -42,4 +42,4 @@ function dfs(curr) {
 
 
 // Example usage:
-console.log(pyramidTransition)
+console.log(pyramidTransition("XYZ", ["XYZ", "YZX"]));
