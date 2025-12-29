@@ -14,7 +14,7 @@ var pyramidTransition = function(bottom, allowed) {
         map.get(key).push(val);
     }
 
-    
+    //main dfs function 
 function dfs(curr) {
         if (curr.length === 1) return true;
 
