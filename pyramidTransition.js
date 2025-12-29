@@ -15,4 +15,27 @@ var pyramidTransition = function(bottom, allowed) {
     }
 
     
+function dfs(curr) {
+        if (curr.length === 1) return true;
+
+        function buildNext(idx, next) {
+            if (idx === curr.length - 1) {
+                return dfs(next);
+            }
+
+            const key = curr[idx] + curr[idx + 1];
+            if (!map.has(key)) return false;
+
+            for (let ch of map.get(key)) {
+                if (buildNext(idx + 1, next + ch)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        return buildNext(0, "");
+    }
+
+    return dfs(bottom);
 };
