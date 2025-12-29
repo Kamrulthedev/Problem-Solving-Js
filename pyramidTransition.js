@@ -39,3 +39,7 @@ function dfs(curr) {
 
     return dfs(bottom);
 };
+
+
+// Example usage:
+console.log(pyramidTransition)
