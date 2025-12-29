@@ -4,5 +4,6 @@
  * @return {boolean}
  */
 var pyramidTransition = function(bottom, allowed) {
+    const map = new Map();
     
 };
