@@ -30,4 +30,17 @@ var numMagicSquaresInside = function(grid) {
                 grid[r + i][c + 2] !== s
             ) return false;
         }
+
+
+                // Columns
+        for (let j = 0; j < 3; j++) {
+            if (
+                grid[r][c + j] +
+                grid[r + 1][c + j] +
+                grid[r + 2][c + j] !== s
+            ) return false;
+        }
+
+
+        
 };
