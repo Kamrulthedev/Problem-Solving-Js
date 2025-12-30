@@ -19,5 +19,7 @@ var numMagicSquaresInside = function(grid) {
             }
         }
 
+           const s =
+            grid[r][c] + grid[r][c + 1] + grid[r][c + 2];
 
 };
