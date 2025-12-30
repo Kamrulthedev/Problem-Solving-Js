@@ -42,5 +42,13 @@ var numMagicSquaresInside = function(grid) {
         }
 
 
-        
+        // Diagonals
+        if (
+            grid[r][c] + grid[r + 1][c + 1] + grid[r + 2][c + 2] !== s ||
+            grid[r][c + 2] + grid[r + 1][c + 1] + grid[r + 2][c] !== s
+        ) return false;
+
+        return true;
+    }
+
 };
