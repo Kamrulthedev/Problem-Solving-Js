@@ -22,4 +22,12 @@ var numMagicSquaresInside = function(grid) {
            const s =
             grid[r][c] + grid[r][c + 1] + grid[r][c + 2];
 
+                    // Rows
+        for (let i = 0; i < 3; i++) {
+            if (
+                grid[r + i][c] +
+                grid[r + i][c + 1] +
+                grid[r + i][c + 2] !== s
+            ) return false;
+        }
 };
