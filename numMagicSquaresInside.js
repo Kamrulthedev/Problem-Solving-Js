@@ -56,4 +56,6 @@ var numMagicSquaresInside = function (grid) {
 };
 
 // Example usage:
-console
+console.log(numMagicSquaresInside([
+    [4, 3, 8, 4]
+]))
