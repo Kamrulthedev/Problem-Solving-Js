@@ -50,5 +50,17 @@ var numMagicSquaresInside = function(grid) {
 
         return true;
     }
+    
 
+    
+    for (let i = 0; i <= rows - 3; i++) {
+        for (let j = 0; j <= cols - 3; j++) {
+            // Center must be 5
+            if (grid[i + 1][j + 1] === 5 && isMagic(i, j)) {
+                count++;
+            }
+        }
+    }
+
+    return count;
 };
