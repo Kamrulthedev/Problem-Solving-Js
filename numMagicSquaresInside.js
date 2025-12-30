@@ -56,3 +56,4 @@ var numMagicSquaresInside = function (grid) {
 };
 
 // Example usage:
+console
