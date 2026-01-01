@@ -10,4 +10,8 @@ var plusOne = function(digits) {
         }
         digits[i] = 0;
     }
+    
+    // If all digits were 9
+    digits.unshift(1);
+    return digits;
 };
