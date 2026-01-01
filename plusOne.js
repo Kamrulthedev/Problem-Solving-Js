@@ -18,3 +18,4 @@ var plusOne = function(digits) {
 
 
 // Example usage:
+console.log(plusOne([1, 2, 3]))
