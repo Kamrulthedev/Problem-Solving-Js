@@ -10,3 +10,8 @@ var repeatedNTimes = function(nums) {
     }
     return nums[nums.length - 1];
 };
+
+
+
+// Example usage:
+console.log(repeatedNTimes([5, 1, 2, 3, 4, 5]));
