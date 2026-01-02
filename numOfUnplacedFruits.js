@@ -16,9 +16,41 @@ var numOfUnplacedFruits = function (fruits, baskets) {
         seg[i] = Math.max(seg[i * 2], seg[i * 2 + 1]);
     }
 
+ // Find leftmost index with value >= target
+    function findIndex(target) {
+        if (seg[1] < target) return -1;
+        let idx = 1;
+        while (idx < size) {
+            if (seg[idx * 2] >= target) {
+                idx = idx * 2;
+            } else {
+                idx = idx * 2 + 1;
+            }
+        }
+        return idx - size;
+    }
 
-    
+    let unplaced = 0;
+
+    for (let fruit of fruits) {
+        const idx = findIndex(fruit);
+        if (idx === -1) {
+            unplaced++;
+        } else {
+            // mark basket as used
+            let pos = size + idx;
+            seg[pos] = 0;
+            while (pos > 1) {
+                pos >>= 1;
+                seg[pos] = Math.max(seg[pos * 2], seg[pos * 2 + 1]);
+            }
+        }
+    }
+
+    return unplaced;
 };
+
+
 
 
 
