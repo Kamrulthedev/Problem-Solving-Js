@@ -51,6 +51,7 @@ var numOfUnplacedFruits = function (fruits, baskets) {
 };
 
 
-
+// Example usage:
+console.log(numOfUnplacedFruits([2, 3, 4, 5, 7, 8, 9, 10]));
 
 
