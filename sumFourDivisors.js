@@ -3,5 +3,6 @@
  * @return {number}
  */
 var sumFourDivisors = function(nums) {
+    let totalSum = 0;
     
 };
