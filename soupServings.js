@@ -30,3 +30,8 @@ var soupServings = function(n) {
 
     return solve(n, n);
 };
+
+
+
+// Example usage:
+console.log(soupServings(50));
