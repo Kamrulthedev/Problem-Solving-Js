@@ -22,5 +22,8 @@ var sumFourDivisors = function(nums) {
                                 if (count > 4) break;
             }
         }
-
+if (count === 4) {
+            totalSum += sum;
+        }
+    }
 };
