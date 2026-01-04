@@ -11,4 +11,12 @@ var sumFourDivisors = function(nums) {
         for (let d = 1; d * d <= num; d++) {
             if (num % d === 0) {
                 let d2 = num / d;
+                
+                if (d === d2) {
+                    count += 1;
+                    sum += d;
+                } else {
+                    count += 2;
+                    sum += d + d2;
+                }
 };
