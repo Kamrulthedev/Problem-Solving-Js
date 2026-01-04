@@ -26,4 +26,7 @@ if (count === 4) {
             totalSum += sum;
         }
     }
+
+        return totalSum;
+
 };
