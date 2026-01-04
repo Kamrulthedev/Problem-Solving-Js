@@ -19,4 +19,8 @@ var sumFourDivisors = function(nums) {
                     count += 2;
                     sum += d + d2;
                 }
+                                if (count > 4) break;
+            }
+        }
+
 };
