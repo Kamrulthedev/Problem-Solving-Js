@@ -8,4 +8,7 @@ var sumFourDivisors = function(nums) {
         for (let num of nums) {
         let sum = 0;
         let count = 0;
+        for (let d = 1; d * d <= num; d++) {
+            if (num % d === 0) {
+                let d2 = num / d;
 };
