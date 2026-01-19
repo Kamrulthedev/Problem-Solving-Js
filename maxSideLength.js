@@ -47,3 +47,12 @@ var maxSideLength = function (mat, threshold) {
 
   return ans;
 };
+
+
+
+// Edxample usage:
+console.log(
+    maxSideLength([
+        [1, 2, 3, 4, 5, 6, 7,  8, 9, 10]
+    ])
+)
