@@ -26,3 +26,8 @@ var minBitwiseArray = function(nums) {
 
     return res;
 };
+
+
+
+// Example usage:
+console.log(minBitwiseArray([2, 3, 4, 5, 6, 7]))
