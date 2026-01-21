@@ -3,5 +3,6 @@
  * @return {number[]}
  */
 var minBitwiseArray = function(nums) {
+    const res = [];
     
 };
