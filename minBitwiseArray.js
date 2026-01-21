@@ -16,5 +16,13 @@ var minBitwiseArray = function(nums) {
         let ans = n;
         // Turn off the least significant 1 bit
         // so that ans | (ans+1) == n
+        let bit = 1;
+        while ((ans | (ans + 1)) !== n) {
+            ans &= ~bit;
+            bit <<= 1;
+        }
+        res.push(ans);
+    }
 
+    return res;
 };
