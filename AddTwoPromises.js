@@ -13,7 +13,7 @@ let TwoPromises = async function (k1, k2) {
     const [v1, v2] = await Promise.all([k1, k2]);
     return v1 + v2;
     
-}
+};
 
 
 
