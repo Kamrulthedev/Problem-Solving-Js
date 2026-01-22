@@ -18,7 +18,7 @@ var once = function(fn) {
 
 
 // Example usage:
-console.log()
+console.log(once())
 
 /**
  * let fn = (a,b,c) => (a + b + c)
