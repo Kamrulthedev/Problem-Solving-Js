@@ -38,3 +38,7 @@ var minimumPairRemoval = function(nums) {
 
     return operations;
 };
+
+
+// Example usage:
+console.log(minimumPairRemoval([5, 3, 4, 5, 6]));
