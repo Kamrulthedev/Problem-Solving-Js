@@ -25,5 +25,6 @@ var hasIncreasingSubarrays = function(nums, k) {
 };
 
 
+
 // Example usage:
 console.log(hasIncreasingSubarrays([1,2,3,4,5,6], 2));
