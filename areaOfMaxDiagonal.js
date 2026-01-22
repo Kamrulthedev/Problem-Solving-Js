@@ -20,3 +20,7 @@ var areaOfMaxDiagonal = function(dimensions) {
 
     return maxArea;
 };
+
+
+// Example usage:
+console.log(areaOfMaxDiagonal([[2, 3, 4, 5, 6, 7]]))
