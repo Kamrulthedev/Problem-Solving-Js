@@ -15,6 +15,8 @@ let TwoPromises = async function (k1, k2) {
     
 }
 
+
+
 // Example usage:
 TwoPromises(Promise.resolve(2), Promise.resolve(3).then(console.log));
 
