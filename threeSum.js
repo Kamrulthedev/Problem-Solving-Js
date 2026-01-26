@@ -2,44 +2,40 @@
  * @param {number[]} nums
  * @return {number[][]}
  */
-var threeSum = function(nums) {
-    nums.sort((a, b) => a - b);
-    const res = [];
-    const n = nums.length;
+var threeSum = function (nums) {
+  nums.sort((a, b) => a - b);
+  const res = [];
+  const n = nums.length;
 
-    for (let i = 0; i < n - 2; i++) {
-        // skip duplicate i
-        if (i > 0 && nums[i] === nums[i - 1]) continue;
+  for (let i = 0; i < n - 2; i++) {
+    // skip duplicate i
+    if (i > 0 && nums[i] === nums[i - 1]) continue;
 
-        let left = i + 1;
-        let right = n - 1;
+    let left = i + 1;
+    let right = n - 1;
 
-        while (left < right) {
-            const sum = nums[i] + nums[left] + nums[right];
+    while (left < right) {
+      const sum = nums[i] + nums[left] + nums[right];
 
-            if (sum === 0) {
-                res.push([nums[i], nums[left], nums[right]]);
+      if (sum === 0) {
+        res.push([nums[i], nums[left], nums[right]]);
 
-                // skip duplicate left & right
-                while (left < right && nums[left] === nums[left + 1]) left++;
-                while (left < right && nums[right] === nums[right - 1]) right--;
+        // skip duplicate left & right
+        while (left < right && nums[left] === nums[left + 1]) left++;
+        while (left < right && nums[right] === nums[right - 1]) right--;
 
-                left++;
-                right--;
-            } 
-            else if (sum < 0) {
-                left++;
-            } 
-            else {
-                right--;
-            }
-        }
+        left++;
+        right--;
+      } else if (sum < 0) {
+        left++;
+      } else {
+        right--;
+      }
     }
+  }
 
-    return res;
+  return res;
 };
-
-
 
 // Example usage:
 console.log(threeSum([-1, 0, 2, 3, 4, 5, 6]));
