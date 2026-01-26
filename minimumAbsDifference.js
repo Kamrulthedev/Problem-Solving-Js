@@ -24,4 +24,4 @@ var minimumAbsDifference = function (arr) {
 };
 
 // Example usage:
-console.log(minimumAbsDifference([4, 3, 2, 2, 1, 5]))
+console.log(minimumAbsDifference([4, 3, 2, 2, 1, 5]));
