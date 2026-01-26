@@ -12,4 +12,11 @@ var minimumAbsDifference = function (arr) {
   for (let i = 0; i < arr.length - 1; i++) {
     minDiff = Math.min(minDiff, arr[i + 1] - arr[i]);
   }
+
+  // Step 3: collect all pairs with that difference
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i + 1] - arr[i] === minDiff) {
+      res.push([arr[i], arr[i + 1]]);
+    }
+  }
 };
