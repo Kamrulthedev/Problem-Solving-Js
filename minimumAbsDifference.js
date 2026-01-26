@@ -7,4 +7,9 @@ var minimumAbsDifference = function (arr) {
 
   let minDiff = Infinity;
   let res = [];
+
+  // Step 2: find minimum difference
+  for (let i = 0; i < arr.length - 1; i++) {
+    minDiff = Math.min(minDiff, arr[i + 1] - arr[i]);
+  }
 };
