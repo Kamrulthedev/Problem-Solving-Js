@@ -38,3 +38,8 @@ var threeSum = function(nums) {
 
     return res;
 };
+
+
+
+// Example usage:
+console.log(threeSum([-1, 0, 2, 3, 4, 5, 6]));
