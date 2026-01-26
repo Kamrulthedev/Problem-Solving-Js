@@ -19,4 +19,6 @@ var minimumAbsDifference = function (arr) {
       res.push([arr[i], arr[i + 1]]);
     }
   }
+
+  return res;
 };
