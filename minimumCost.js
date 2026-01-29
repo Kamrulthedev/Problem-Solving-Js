@@ -33,4 +33,14 @@ var minimumCost = function(source, target, original, changed, cost) {
             }
         }
     }
+
+    // calculate total cost
+    let ans = 0;
+    for (let i = 0; i < source.length; i++) {
+        const s = source[i].charCodeAt(0) - 97;
+        const t = target[i].charCodeAt(0) - 97;
+
+        if (dist[s][t] === INF) return -1;
+        ans += dist[s][t];
+    }
 };
