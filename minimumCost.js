@@ -43,4 +43,6 @@ var minimumCost = function(source, target, original, changed, cost) {
         if (dist[s][t] === INF) return -1;
         ans += dist[s][t];
     }
+
+    return ans;
 };
