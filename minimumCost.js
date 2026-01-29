@@ -13,5 +13,6 @@ var minimumCost = function(source, target, original, changed, cost) {
         // dist[i][j] = min cost to convert char i -> j
     const dist = Array.from({ length: N }, () => Array(N).fill(INF));
 
-    
+     // same char cost = 0
+    for (let i = 0; i < N; i++) dist[i][i] = 0;
 };
