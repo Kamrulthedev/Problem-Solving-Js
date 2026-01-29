@@ -46,3 +46,10 @@ var minimumCost = function (source, target, original, changed, cost) {
 
   return ans;
 };
+
+
+// Example usage:
+console.log(minimumCost(
+    "abs",
+    "cde"
+));
