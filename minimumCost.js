@@ -7,5 +7,7 @@
  * @return {number}
  */
 var minimumCost = function(source, target, original, changed, cost) {
+    const INF = 1e15;
+    const N = 26;
     
 };
