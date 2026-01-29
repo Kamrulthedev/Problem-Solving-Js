@@ -22,4 +22,15 @@ var minimumCost = function(source, target, original, changed, cost) {
         const v = changed[i].charCodeAt(0) - 97;
         dist[u][v] = Math.min(dist[u][v], cost[i]);
     }
+
+     // Floyd–Warshall
+    for (let k = 0; k < N; k++) {
+        for (let i = 0; i < N; i++) {
+            for (let j = 0; j < N; j++) {
+                if (dist[i][k] + dist[k][j] < dist[i][j]) {
+                    dist[i][j] = dist[i][k] + dist[k][j];
+                }
+            }
+        }
+    }
 };
