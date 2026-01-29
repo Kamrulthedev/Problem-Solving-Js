@@ -15,4 +15,11 @@ var minimumCost = function(source, target, original, changed, cost) {
 
      // same char cost = 0
     for (let i = 0; i < N; i++) dist[i][i] = 0;
+
+    // build graph
+    for (let i = 0; i < original.length; i++) {
+        const u = original[i].charCodeAt(0) - 97;
+        const v = changed[i].charCodeAt(0) - 97;
+        dist[u][v] = Math.min(dist[u][v], cost[i]);
+    }
 };
